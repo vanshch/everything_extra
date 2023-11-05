@@ -20,3 +20,30 @@ void evadeBullets(ship& ob) {
     }
 }
 // invoking the function if the ship is fired upon 
+
+void opposite(ship& ob, shipInfo info) {
+		if (info.getShipDirection() == Direction::WEST) {
+			ob.Greed_sail(Direction::EAST, 1);
+		}
+		else if (info.getShipDirection() == Direction::EAST) {
+			ob.Greed_sail(Direction::WEST, 1);
+		}
+		else if (info.getShipDirection() == Direction::NORTH) {
+			ob.Greed_sail(Direction::SOUTH, 1);
+		}
+		else if (info.getShipDirection() == Direction::SOUTH) {
+			ob.Greed_sail(Direction::NORTH, 1);
+		}
+		else if (info.getShipDirection() == Direction::NORTH_EAST) {
+			ob.Greed_sail(Direction::NORTH_WEST, 1);
+		}
+		else if (info.getShipDirection() == Direction::NORTH_WEST) {
+			ob.Greed_sail(Direction::NORTH_EAST, 1);
+		}
+		else if (info.getShipDirection() == Direction::SOUTH_EAST) {
+			ob.Greed_sail(Direction::SOUTH_WEST, 1);
+		}
+		else if (info.getShipDirection() == Direction::SOUTH_WEST) {
+			ob.Greed_sail(Direction::SOUTH_EAST, 1);
+		}
+	}
